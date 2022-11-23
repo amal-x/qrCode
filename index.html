@@ -134,6 +134,7 @@
                        
                         <div id="canvas" class="qr"></div>
 
+
                     </div>
 
 
@@ -169,14 +170,55 @@
 <script>
     function changeTab(current, first, second) {
         document.getElementById(`${current}`).classList.remove('tabcontent')
-        document.getElementById(`writ`).value = ''
+        if(current =='London' )
+        {
+
+            document.getElementById(`textwrit`).value = ''
+            document.getElementById(`fname`).value = ''
+            document.getElementById(`organisation`).value = ''
+            document.getElementById(`title`).value = ''
+            document.getElementById(`email`).value = ''
+            document.getElementById(`phone`).value = ''
+            document.getElementById(`mob`).value = ''
+            document.getElementById(`fax`).value = ''
+            document.getElementById(`city`).value = ''
+            document.getElementById(`street`).value = ''
+            document.getElementById(`city`).value = ''
+            document.getElementById(`region`).value = ''
+            document.getElementById(`postcode`).value = ''
+            document.getElementById(`country`).value = ''
+            document.getElementById(`url`).value = ''
+        }else if(current == 'Paris'){
+
+            document.getElementById(`writ`).value = ''
+            document.getElementById(`fname`).value = ''
+            document.getElementById(`organisation`).value = ''
+            document.getElementById(`title`).value = ''
+            document.getElementById(`email`).value = ''
+            document.getElementById(`phone`).value = ''
+            document.getElementById(`mob`).value = ''
+            document.getElementById(`fax`).value = ''
+            document.getElementById(`city`).value = ''
+            document.getElementById(`street`).value = ''
+            document.getElementById(`city`).value = ''
+            document.getElementById(`region`).value = ''
+            document.getElementById(`postcode`).value = ''
+            document.getElementById(`country`).value = ''
+            document.getElementById(`url`).value = ''
+        }else{
+           
+            document.getElementById(`writ`).value = ''
+            document.getElementById(`textwrit`).value = ''
+
+
+
+        }
         
-        document.getElementById(`${first}`).classList.add("tabcontent")
-        document.getElementById(`textwrit`).value = ''
         document.getElementById(`canvas`).innerHTML = ''
+        document.getElementById(`${first}`).classList.add("tabcontent")
        
         document.getElementById(`${second}`).classList.add("tabcontent")
-        // document.getElementById(`${second}`).value = ''
+       
          
     }
 </script>
