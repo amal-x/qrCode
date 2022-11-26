@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="full">
+        <div class="sidenav" id="mySidenav">
+            <div  class="">
+               
+                <div class="second">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <p class="bb-para">QR code</p>
+                    <div class="left-second">
+                        <div class="icon">
+                            <img style="width: 35px;" src="qr.svg">
+                        </div>
+                        <div class="top-content">
+
+                            <p class="left-head">Generate</p>
+                            <p class="para">Static QR code</p>
+                        </div>
+                    </div>
+                    <div class="left-second">
+                        <div class="icon">
+                            <img style="width: 35px;" src="qr.svg">
+                        </div>
+
+                        <div class="top-content">
+                            <p class="left-head">Scan </p>
+                            <p class="para">Using your webcam</p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+        <div class="right" id="right">
+
+            <div class="right-top">
+                <div class="menu">
+                    <span onclick="openNav()">&#9776; </span>
+                   
+                </div>
+
+
+                <h1 class="hd" style="color: white; padding: 9px;">QR Code Generate</h1>
+            </div>
+            <div class="right-last">
+                <div class="right-right">
+                    <div class="right-second">
+                        <div class="right-second-cont">
+                            <div class="tab">
+                                <button class="tablinks" onclick="changeTab( 'London','Paris','Tokyo')">URL</button>
+                                <button class="tablinks" onclick="changeTab( 'Paris','London','Tokyo')">FREE TEXT</button>
+                                <button class="tablinks" onclick="changeTab( 'Tokyo','Paris','London')">CONTACT</button>
+                            </div>
+                        </div>
+                        <div class="right-bottom-text">
+                            <div id="London" class="">
+                              
+                                <div class="searchformfld">
+                                    <input type="url" class="candidateName" id="writ" name="candidateName" onkeyup="generateQr()" required>
+                                    <label for="candidateName">Enter URL</label>
+                                    <p><strong id="errormsg"></strong></p>
+                                </div>
+
+                                <div class="p">
+                                    <p  style="color: gray; margin-left: 12px;
+                                    margin-top: -24px;">Link to open when scanned, e.g. https://example.com/</p>
+                                </div>
+                            </div>
+                            <div id="Paris" class="tabcontent">
+                                <div class="searchformfldd">
+                                    
+                                    <input type="text" class="candidateNamee" id="textwrit" name="candidateNamee" placeholder=" " onkeyup="generateQr()" >
+                                    <label for="candidateNamee">Enter text to share here</label>
+                                   
+                                </div>
+                            </div>
+                            <div id="Tokyo" class="tabcontent" onkeyup="generateQr()">
+
+                                <div class="n">
+                                    <p>Show contact details when scanned</p>
+                                </div>
+                                <div style="margin-top: 38px;">
+                                    <div class="searchformflddd">
+                                        <input type="text" class="candidateNameee" value="" id="fname" name="candidateNameee" placeholder=" ">
+                                        <label for="candidateName">First Name</label>
+                                      
+                                    </div>
+                                    <div class="searchformflddd">
+                                        <input type="text" class="candidateNameee" id="organisation" name="candidateNameee" placeholder=" ">
+                                        <label for="candidateNameee">Organization</label>
+                                       
+                                    </div>
+                                    <div class="searchformflddd">
+                                        <input type="text" class="candidateNameee" id="title" name="candidateNameee" placeholder=" ">
+                                        <label for="candidateNameee">Title</label>
+                                       
+                                    </div>
+                                    <div class="searchformflddd">
+                                        <input type="text" class="candidateNameee" id="email" name="candidateNameee" placeholder=" ">
+                                        <label for="candidateNameee">Email</label>
+                                       
+                                    </div>
+                                    <div class="searchformflddd">
+                                        <input type="text" class="candidateNameee" id="phone" name="candidateNameee" placeholder=" ">
+                                        <label for="candidateNameee">Phone</label>
+                                       
+                                    </div>
+                                    <div class="searchformflddd">
+                                        <input type="text" class="candidateNameee" id="mob" name="candidateNameee" placeholder=" ">
+                                        <label for="candidateNameee">Mobile Phone</label>
+                                       
+                                    </div>
+                                    <div class="searchformflddd">
+                                        <input type="text" class="candidateNameee" id="fax" name="candidateNameee" placeholder=" ">
+                                        <label for="candidateNameee">Fax</label>
+                                       
+                                    </div>
+                                    <div class="searchformflddd">
+                                        <input type="text" class="candidateNameee" id="street" name="candidateNameee" placeholder=" ">
+                                        <label for="candidateNameee">Street</label>
+                                       
+                                    </div>
+                                    <div class="searchformflddd">
+                                        <input type="text" class="candidateNameee" id="city" name="candidateNameee" placeholder=" ">
+                                        <label for="candidateNameee">City</label>
+                                       
+                                    </div>
+                                    <div class="searchformflddd">
+                                        <input type="text" class="candidateNameee" id="region" name="candidateNameee" placeholder=" ">
+                                        <label for="candidateNameee">Region</label>
+                                       
+                                    </div>
+                                    <div class="searchformflddd">
+                                        <input type="text" class="candidateNameee" id="postcode" name="candidateNameee" placeholder=" ">
+                                        <label for="candidateNameee">Postcode</label>
+                                       
+                                    </div>
+                                    <div class="searchformflddd">
+                                        <input type="text" class="candidateNameee" id="country" name="candidateNameee" placeholder=" ">
+                                        <label for="candidateNameee">Country</label>
+                                       
+                                    </div>
+                                    <div class="searchformflddd">
+                                        <input type="text" class="candidateNameee" id="url" name="candidateNameee" placeholder=" ">
+                                        <label for="candidateNameee">URL/Website/Social</label>
+                                       
+                                    </div>
+                                </div>
+                               
+                               
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="right-last-box">
+                        <div style="display: flex;">
+                            <h2 style="margin-left: 18px;">Static Qr Code </h2>
+                            <div><img style="width: 30px;
+                                margin-top: 22px;
+                                margin-left: 12px;" src="lin.svg"></div>
+                        </div>
+                       
+                        <p class="right-last-para" style="color: black;  margin-left: 18px;">Content is directly encoded in the image. If you
+                            want to be able to update it later or use scan tracking, <u>create a Dynamic QR Code.</u></p>
+                        <div>
+                            <button class="btton" onclick="downloadQr()"><img style="width: 30px;" src="down.svg"></button>
+
+                            <input class="color" type="color" id="colorInput" onchange="generateQr()">
+    
+    
+    
+                            <img style="width: 30px;
+                            margin-left: 7px;
+                            margin-top: 47px;" src="color.svg">
+    
+    
+                        </div>
+                        <div id="canvas" class="qr"></div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+</body>
+<!-- <script>
+    function changeTab(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script> -->
+    <script>
+        function changeTab(current, first, second) {
+            document.getElementById(`${current}`).classList.remove('tabcontent')
+            if (current == 'London') {
+    
+                document.getElementById(`textwrit`).value = ''
+                document.getElementById(`fname`).value = ''
+                document.getElementById(`organisation`).value = ''
+                document.getElementById(`title`).value = ''
+                document.getElementById(`email`).value = ''
+                document.getElementById(`phone`).value = ''
+                document.getElementById(`mob`).value = ''
+                document.getElementById(`fax`).value = ''
+                document.getElementById(`city`).value = ''
+                document.getElementById(`street`).value = ''
+                document.getElementById(`city`).value = ''
+                document.getElementById(`region`).value = ''
+                document.getElementById(`postcode`).value = ''
+                document.getElementById(`country`).value = ''
+                document.getElementById(`url`).value = ''
+            } else if (current == 'Paris') {
+    
+                document.getElementById(`writ`).value = ''
+                document.getElementById(`fname`).value = ''
+                document.getElementById(`organisation`).value = ''
+                document.getElementById(`title`).value = ''
+                document.getElementById(`email`).value = ''
+                document.getElementById(`phone`).value = ''
+                document.getElementById(`mob`).value = ''
+                document.getElementById(`fax`).value = ''
+                document.getElementById(`city`).value = ''
+                document.getElementById(`street`).value = ''
+                document.getElementById(`city`).value = ''
+                document.getElementById(`region`).value = ''
+                document.getElementById(`postcode`).value = ''
+                document.getElementById(`country`).value = ''
+                document.getElementById(`url`).value = ''
+            } else {
+    
+                document.getElementById(`writ`).value = ''
+                document.getElementById(`textwrit`).value = ''
+    
+    
+    
+            }
+    
+            document.getElementById(`canvas`).innerHTML = ''
+            document.getElementById(`${first}`).classList.add("tabcontent")
+    
+            document.getElementById(`${second}`).classList.add("tabcontent")
+    
+    
+        }
+    </script>
+    
+    <script type="text/javascript">
+    
+    
+    
+        function generateQ() {
+            var fname = document.getElementById('fname').value;
+            var organisation = document.getElementById('organisation').value;
+            var title = document.getElementById('title').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var mob = document.getElementById('mob').value;
+            var fax = document.getElementById('fax').value;
+            var street = document.getElementById('street').value;
+            var city = document.getElementById('city').value;
+            var region = document.getElementById('region').value;
+            var postcode = document.getElementById('postcode').value;
+            var country = document.getElementById('country').value;
+            var url = document.getElementById('url').value;
+            var color = document.getElementById('colorInput').value;
+            var amal = 10
+    
+    
+    
+            var vcard = `BEGIN:VCARD
+    VERSION:3.0
+    N:text1;text;;;
+    FN:${fname}
+    ORG:${organisation};
+    TITLE:${title}
+    TEL;type=CELL;type=VOICE:${phone}
+    TEL:${mob}
+    TEL;type=WORK;type=FAX:${fax}
+    EMAIL;type=INTERNET:${email}
+    item3.ADR;type=HOME:;;${street};${city};${region};${postcode};${country}
+    item4.URL:${url}
+    item4.X-ABLabel:_$!<HomePage>!$_
+    END:VCARD`;
+            qrcode(vcard)
+    
+    
+        }
+    
+    
+    
+        function generateQr() {
+    
+    
+    
+    
+            if (document.getElementById("London").classList.value == '') {
+                isUrlValid(document.getElementById('writ').value);
+    
+            } else if (document.getElementById("Paris").classList.value == '') {
+                var text2 = document.getElementById('textwrit').value;
+                qrcode(text2)
+            } else {
+                generateQ();
+            }
+    
+            function isUrlValid(userInput) {
+                var res = userInput.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+                if (res == null) {
+                    document.getElementById('errormsg').innerHTML = 'please enter correct url'
+                }
+                else {
+                    if (document.getElementById("London").classList.value == '') {
+                        var text1 = document.getElementById('writ').value;
+                        qrcode(text1)
+                    }
+                    document.getElementById('errormsg').innerHTML = ''
+                }
+    
+            }
+    
+    
+    
+    
+    
+    
+        }
+    
+        let download
+    
+        function qrcode(text) {
+            console.log(text)
+            var color = document.getElementById('colorInput').value;
+            document.getElementById("canvas").innerHTML = " "
+            const qrCode = new QRCodeStyling({
+                width: 200,
+                height: 200,
+                type: "svg",
+                data: text,
+                image: "",
+                dotsOptions: {
+                    color: color,
+                    type: "rounded"
+                },
+                backgroundOptions: {
+                    color: "white",
+                },
+                imageOptions: {
+                    crossOrigin: "anonymous",
+                    margin: 20
+                }
+            });
+            download = qrCode
+    
+            qrCode.append(document.getElementById("canvas"));
+    
+    
+    
+    
+        }
+    
+        function downloadQr() {
+            download.download({ name: "qr", extension: "svg" });
+        }
+    
+    
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("right").style.marginLeft = "250px";
+        }
+    
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("right").style.marginLeft = "0";
+        }
+    
+    
+    
+    
+    
+    </script>
+<!-- <script type="text/javascript">
+    function generateQrr() {
+
+        var text = document.getElementById('writ').value;
+        var color = document.getElementById('colorInput').value;
+
+        document.getElementById("canvas").innerHTML = " "
+        const qrCode = new QRCodeStyling({
+            width: 200,
+            height: 200,
+            type: "svg",
+            data: text,
+            image: "",
+            dotsOptions: {
+                color: color,
+                type: "rounded"
+            },
+            backgroundOptions: {
+                color: "#e9ebee",
+            },
+            imageOptions: {
+                crossOrigin: "anonymous",
+                margin: 20
+            }
+        });
+
+        qrCode.append(document.getElementById("canvas"));
+    }
+
+
+</script>
+<script type="text/javascript">
+
+
+
+    function generateQ() {
+
+        var fname = document.getElementById('fname').value;
+        var organisation = document.getElementById('organisation').value;
+        var title = document.getElementById('title').value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('phone').value;
+        var mob = document.getElementById('mob').value;
+        var fax = document.getElementById('fax').value;
+        var street = document.getElementById('street').value;
+        var city = document.getElementById('city').value;
+        var region = document.getElementById('region').value;
+        var postcode = document.getElementById('postcode').value;
+        var country = document.getElementById('country').value;
+        var url = document.getElementById('url').value;
+        var color = document.getElementById('colorInput').value;
+
+
+
+        var vcard = `BEGIN:VCARD
+VERSION:3.0
+N:text1;text;;;
+FN:${fname}
+ORG:${organisation};
+TITLE:${title}
+TEL;type=CELL;type=VOICE:${phone}
+TEL:${mob}
+TEL;type=WORK;type=FAX:${fax}
+EMAIL;type=INTERNET:${email}
+item3.ADR;type=HOME:;;${street};${city};${region};${postcode};${country}
+item4.URL:${url}
+item4.X-ABLabel:_$!<HomePage>!$_
+END:VCARD`;
+        document.getElementById("canvas").innerHTML = " "
+        const qrCode = new QRCodeStyling({
+            width: 200,
+            height: 200,
+            type: "svg",
+            data: vcard,
+            image: "",
+            dotsOptions: {
+                color: color,
+                type: "rounded"
+            },
+            backgroundOptions: {
+                color: "#e9ebee",
+            },
+            imageOptions: {
+                crossOrigin: "anonymous",
+                margin: 20
+            }
+        });
+
+        qrCode.append(document.getElementById("canvas"));
+
+
+    }
+</script> -->
+
+
+</html>
