@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.main{
+  
+}
+.tab {
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+    margin-top: 37px;
+   
+}
+.tablinks{
+    border: none;
+    background: white;
+    margin-top: 35px;
+    border-radius: 50%;
+    height: 53px;
+   
+}
+.tabcontent {
+    display: none;
+}
+.right-second-cont {
+   /* margin: auto; */
+   background-color: white;
+    height: 696px;
+    width: 66px;
+    border-radius: 33px;
+    margin-top: -47px;
+}
+.right-bottom-text{
+    margin: auto;
+    margin-right: 93px;
+    margin-left: 38px;
+   
+}
+.right-last-box{
+    width: 435px;
+    height: 831px;
+    margin-right: 36px;
+    border-radius: 33px;
+    background-color: #012989;
+    margin-top: 33px;
+}
+.inner-box{
+    display: flex;
+    background-color: #EAF7FF;
+    /* justify-content: center; */
+    border-radius: 15px;
+    width: 1200px;
+    height: 911px;
+   margin-top: 21px; 
+    margin: auto;
+     font-family: poppins;
+}
+.searchformfld{
+    position: relative;
+    margin: 5px 0px;
+   
+}
+.searchformfld label{
+    position: absolute;
+    margin-left: -425px;
+    top: 15px;
+    color: black;
+    cursor: text;
+    font-size: 20px;
+    
+
+}
+.candidateName{
+    width: 700px;
+}
+.searchformfld input:focus + label,.searchformfld input:not(:placeholder-shown) + label{
+    opacity:1;
+    transform: scale(.9) translateY(-100%) translateX(-10px);
+    outline: none;
+   
+}
+.searchformfld input:focus{
+   
+    outline: none;
+}
+.searchformfld{
+    padding: 15px;
+    margin:15px 0px;
+    margin-top: -164px;
+   
+   
+
+}
+.searchformfld input{
+    width: 431px;
+}
+.searchformfld label,.searchformfld input{
+    transition: all 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity:0.5;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 45px;
+    height: 35px;
+    background-color: #EAF7FF;
+    
+}
+/*******/
+.searchformfldd{
+    position: relative;
+    margin: 5px 0px;
+     color: black;
+   
+}
+.searchformfldd label{
+    position: absolute;
+    margin-left: -425px;
+    
+    top:0px;
+    color: black;
+    cursor: text;
+   
+    
+
+}
+.candidateNamee{
+    width: 700px;
+    color: black;
+}
+.searchformfldd input:focus + label,.searchformfldd input:not(:placeholder-shown) + label{
+    opacity:1;
+    transform: scale(.9) translateY(-100%) translateX(-10px);
+    outline: none;
+  
+}
+.searchformfldd input:focus{
+   
+    outline: none;
+  
+}
+.searchformfldd{
+    padding: 15px;
+    margin: 89px 0px;
+   
+
+}
+.searchformfldd input{
+    width:431px;
+    
+}
+.searchformfldd label,.searchformfldd input{
+    transition: all 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity:0.5;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #EAF7FF;
+    height: 40px;
+   
+   
+    
+}
+/************************/
+.searchformflddd{
+    position: relative;
+    margin: 5px 0px;
+     color: black;
+   
+}
+.searchformflddd label{
+    position: absolute;
+    margin-left: -425px;
+    
+    top:0px;
+    color: black;
+    cursor: text;
+   
+    
+
+}
+.candidateNameee{
+    width: 700px;
+    color: black;
+}
+.searchformflddd input:focus + label,.searchformflddd input:not(:placeholder-shown) + label{
+    opacity:1;
+    transform: scale(.9) translateY(-100%) translateX(-10px);
+    outline: none;
+  
+}
+.searchformflddd input:focus{
+   
+    outline: none;
+  
+}
+.searchformflddd{
+    padding: 6px;
+    margin:15px 0px;
+   
+
+}
+.searchformflddd input{
+    width:431px;
+    
+}
+.searchformflddd label,.searchformflddd input{
+    transition: all 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity:0.5;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #EAF7FF;
+   
+   
+    
+}
+
+.right-last-para{
+    font-family: poppins;
+    color: gray;
+    font-size: 15px;
+    margin-top: -24px;
+}
+.right-last{
+    width: auto;
+}
+.right-last-boxx {
+   
+    font-family: poppins;
+    /* width: auto; */
+    height: 889px;
+    /* margin-top: 2px; */
+    /* margin: auto; */
+    margin-left: -49px;
+}
+.qr{
+    margin: auto;
+    position: absolute;
+    margin-top: 72px;
+    margin-left: 114px;
+    height: 200;
+    height: 182px;
+    width: 200px;
+   
+}
+.color{
+  
+    width: 274px;
+    height: 43px;   
+   
+}
+.col{
+    text-align: center;
+    position: absolute;
+    margin-top: 384px;
+    margin-left: 82px;
+    opacity: 0;
+}
+.select{
+    display: block;
+    position: absolute;
+    width: 300px;
+    margin: auto;
+    color: white;
+    margin-top: 375px;
+    margin-left: 68px;
+    height: 60px;
+    border-radius: 18px;
+    background-color: #1239A0;
+    border-color: #1239A0;
+    word-spacing: 192px;
+   
+}
+.btton{
+    width: 100px;
+    border: none;
+    border-radius: 50px;
+    background-color: #FF9B05;
+    height: 38px;
+    margin-top: 421px;
+    position: absolute;
+    margin-left: -130px;
+    color: white;
+   
+}
+.bttonn{
+    width: 100px;
+    border: none;
+    border-radius: 50px;
+    background-color: #FF9B05;
+    height: 38px;
+    margin-top: 421px;
+    position: absolute;
+    color: white;
+}
+.first{
+   margin: auto;
+   margin-left: 44px;
+}
+.last{
+    width: 100%;
+}
+.fi{
+    text-align: center;
+    width: 100%;
+    padding-top: 61px;
+    padding-left: 13px;
+}
+.ll{
+    width: 100%;
+    text-align: -webkit-center;
+}
+.n{
+    padding-left: 5px;
+    position: absolute;
+    color: #072983;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: -99px;
+}
+.london{
+    margin-left: 31px;
+}
+#paris{
+    padding-left: 26px;
+}
+
+  
+
+.tabcontent.active {
+    background-color: cornflowerblue;
+  }
+  .save{
+    position: absolute;
+    margin-top: -81px;
+  }

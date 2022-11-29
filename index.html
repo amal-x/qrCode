@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #DAEAF7;">
+     <div class="main">
+        <div class="inner-box">
+         
+         <div class="first">
+            <h1 class="save">Save.</h1>
+            <div class="right-second-cont"  >
+               
+                <div class="tab">
+                    <button id="first-tab" class="tablinks" onclick="changeTab( 'London','Paris','Tokyo')"><a><img style="    width: 19px;
+                        transform: rotate(406deg) ;margin-top: 6px;" src="link-svgrepo-com (1).svg"> </a></button>
+                    <button id="second-tab" class="tablinks" onclick="changeTab( 'Paris','London','Tokyo')"><a><img style="    width: 19px; margin-top: 6px;" src="v-card-svgrepo-com.svg"></a>
+                       </button>
+                    <button id="third-tab" class="tablinks" onclick="changeTab( 'Tokyo','Paris','London')"><a><img style="    width: 19px; margin-top: 6px;" src="text-svgrepo-com.svg"></button></a>
+                </div>
+            </div>
+         </div>
+          
+          
+            <div class="right-bottom-text" >
+              
+                    <div id="London" class="">
+
+                
+                        <div class="searchformfld">
+                            <h2 style="font-size: 50px;
+                            margin-top: -103px;
+                            color: #072983;">URL</h2>
+                            <input type="url" class="candidateName" id="writ" name="candidateName"
+                                onkeyup="generateQr()" required>
+                                
+                            <label for="candidateName">Enter URL</label>
+                            <p><strong id="errormsg"></strong></p>
+                        </div>
+                   
+                        <div class="p">
+                            <p style="color: gray; margin-left: 12px;
+                            margin-top: -24px;">Link to open when scanned, e.g. https://example.com/</p>
+                        </div>
+                    </div>
+             
+              
+                <div id="Paris" class="tabcontent">
+                    <h2 style="font-size: 53px;
+                    margin-top: -197px;
+                    color: #072983;margin-left: 12px;">TEXT</h2>
+                    <div class="searchformfldd">
+                       
+
+                        <input type="text" class="candidateNamee" id="textwrit" name="candidateNamee"
+                            placeholder=" " onkeyup="generateQr()">
+                        <label for="candidateNamee">Enter text to share here</label>
+
+                    </div>
+                </div>
+                <div id="Tokyo" class="tabcontent" onkeyup="generateQr()">
+
+                    <div class="n">
+                        <p>Show contact details when scanned</p>
+                    </div>
+                    <div style="margin-top: 127px;">
+                        <div class="searchformflddd">
+                            <input type="text" class="candidateNameee" value="" id="fname"
+                                name="candidateNameee" placeholder=" ">
+                            <label for="candidateName">First Name</label>
+
+                        </div>
+                        <div class="searchformflddd">
+                            <input type="text" class="candidateNameee" id="organisation"
+                                name="candidateNameee" placeholder=" ">
+                            <label for="candidateNameee">Organization</label>
+
+                        </div>
+                        <div class="searchformflddd">
+                            <input type="text" class="candidateNameee" id="title" name="candidateNameee"
+                                placeholder=" ">
+                            <label for="candidateNameee">Title</label>
+
+                        </div>
+                        <div class="searchformflddd">
+                            <input type="text" class="candidateNameee" id="email" name="candidateNameee"
+                                placeholder=" ">
+                            <label for="candidateNameee">Email</label>
+
+                        </div>
+                        <div class="searchformflddd">
+                            <input type="text" class="candidateNameee" id="phone" name="candidateNameee"
+                                placeholder=" ">
+                            <label for="candidateNameee">Phone</label>
+
+                        </div>
+                        <div class="searchformflddd">
+                            <input type="text" class="candidateNameee" id="mob" name="candidateNameee"
+                                placeholder=" ">
+                            <label for="candidateNameee">Mobile Phone</label>
+
+                        </div>
+                        <div class="searchformflddd">
+                            <input type="text" class="candidateNameee" id="fax" name="candidateNameee"
+                                placeholder=" ">
+                            <label for="candidateNameee">Fax</label>
+
+                        </div>
+                        <div class="searchformflddd">
+                            <input type="text" class="candidateNameee" id="street" name="candidateNameee"
+                                placeholder=" ">
+                            <label for="candidateNameee">Street</label>
+
+                        </div>
+                        <div class="searchformflddd">
+                            <input type="text" class="candidateNameee" id="city" name="candidateNameee"
+                                placeholder=" ">
+                            <label for="candidateNameee">City</label>
+
+                        </div>
+                        <div class="searchformflddd">
+                            <input type="text" class="candidateNameee" id="region" name="candidateNameee"
+                                placeholder=" ">
+                            <label for="candidateNameee">Region</label>
+
+                        </div>
+                        <div class="searchformflddd">
+                            <input type="text" class="candidateNameee" id="postcode" name="candidateNameee"
+                                placeholder=" ">
+                            <label for="candidateNameee">Postcode</label>
+
+                        </div>
+                        <div class="searchformflddd">
+                            <input type="text" class="candidateNameee" id="country" name="candidateNameee"
+                                placeholder=" ">
+                            <label for="candidateNameee">Country</label>
+
+                        </div>
+                        <div class="searchformflddd">
+                            <input type="text" class="candidateNameee" id="url" name="candidateNameee"
+                                placeholder=" ">
+                            <label for="candidateNameee">URL/Website/Social</label>
+
+                        </div>
+                    </div>
+                </div>
+            </div>  
+           
+               <div class="ll">
+                <div class="right-last-box">
+             
+                    <div class="q">
+                        <div id="canvas" class="qr"></div>
+                    </div>
+               
+                   
+                    <div class="b">
+                       <button class="select" >COLOR &#8744;</button>
+                          <div class="col">
+                            <input class="color" type="color" id="colorInput" onchange="generateQr()">
+                         
+                          </div>
+                       
+                    </div>
+                    <div class="fi">
+                        <button class="btton" onclick="downloadQr()">  SVG<img style="width: 15px;
+                            margin-top: 2px;
+                            margin-left: 4px; "
+                            src="download-svgrepo-com (1).svg"></button>
+                         <button class="bttonn"   onclick="downloadQrq()">  JPG<img style="width: 15px;
+                            margin-top: 2px;
+                            margin-left: 4px; "
+                                src="download-svgrepo-com (1).svg" ></button>
+                    </div>
+                   
+    
+    
+    
+                </div>   
+               </div>
+           
+
+        </div>
+
+     </div>
+    
+</body>
+<script type="text/javascript">
+    function changeTab(current, first, second) {
+        document.getElementById(`${current}`).classList.remove('tabcontent')
+       
+        if (current == 'London') {
+
+            document.getElementById(`textwrit`).value = ''
+            document.getElementById(`fname`).value = ''
+            document.getElementById(`organisation`).value = ''
+            document.getElementById(`title`).value = ''
+            document.getElementById(`email`).value = ''
+            document.getElementById(`phone`).value = ''
+            document.getElementById(`mob`).value = ''
+            document.getElementById(`fax`).value = ''
+            document.getElementById(`city`).value = ''
+            document.getElementById(`street`).value = ''
+            document.getElementById(`city`).value = ''
+            document.getElementById(`region`).value = ''
+            document.getElementById(`postcode`).value = ''
+            document.getElementById(`country`).value = ''
+            document.getElementById(`url`).value = ''
+            document.getElementById("first-tab").style.backgroundColor = "#1239A0";
+            document.getElementById("second-tab").style.backgroundColor = "white";
+            document.getElementById("third-tab").style.backgroundColor = "white";
+          
+        } else if (current == 'Paris') {
+
+            document.getElementById(`writ`).value = ''
+            document.getElementById(`fname`).value = ''
+            document.getElementById(`organisation`).value = ''
+            document.getElementById(`title`).value = ''
+            document.getElementById(`email`).value = ''
+            document.getElementById(`phone`).value = ''
+            document.getElementById(`mob`).value = ''
+            document.getElementById(`fax`).value = ''
+            document.getElementById(`city`).value = ''
+            document.getElementById(`street`).value = ''
+            document.getElementById(`city`).value = ''
+            document.getElementById(`region`).value = ''
+            document.getElementById(`postcode`).value = ''
+            document.getElementById(`country`).value = ''
+            document.getElementById(`url`).value = ''
+            document.getElementById("second-tab").style.backgroundColor = "#1239A0";
+            document.getElementById("first-tab").style.backgroundColor = "white";
+            document.getElementById("third-tab").style.backgroundColor = "white";
+          
+        } else {
+
+            document.getElementById(`writ`).value = ''
+            document.getElementById(`textwrit`).value = ''
+            document.getElementById("third-tab").style.backgroundColor = "#1239A0";
+            document.getElementById("first-tab").style.backgroundColor = "white";
+            document.getElementById("second-tab").style.backgroundColor = "white";
+          
+
+
+
+        }
+
+        document.getElementById(`canvas`).innerHTML = ''
+        document.getElementById(`${first}`).classList.add("tabcontent")
+        document.getElementById(`canvas`).innerHTML = ''
+        
+
+        document.getElementById(`${second}`).classList.add("tabcontent")
+        document.getElementById(`canvas`).innerHTML = ''
+
+
+    }
+    
+
+
+
+
+
+
+    function generateQ() {
+      
+
+        var fname = document.getElementById('fname').value;
+        var organisation = document.getElementById('organisation').value;
+        var title = document.getElementById('title').value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('phone').value;
+        var mob = document.getElementById('mob').value;
+        var fax = document.getElementById('fax').value;
+        var street = document.getElementById('street').value;
+        var city = document.getElementById('city').value;
+        var region = document.getElementById('region').value;
+        var postcode = document.getElementById('postcode').value;
+        var country = document.getElementById('country').value;
+        var url = document.getElementById('url').value;
+
+
+        if (fname == "" && organisation == "" && title == "" && email == "" && phone == "" && mob == "" && fax == "" && street == "" && city == "" && region == "" && postcode == "" && country == "" && url == "") {
+            document.getElementById("canvas").innerHTML = ""
+        }
+        else {
+
+            var vcard = `BEGIN:VCARD
+VERSION:3.0
+N:text1;text;;;
+FN:${fname}
+ORG:${organisation};
+TITLE:${title}
+TEL;type=CELL;type=VOICE:${phone}
+TEL:${mob}
+TEL;type=WORK;type=FAX:${fax}
+EMAIL;type=INTERNET:${email}
+item3.ADR;type=HOME:;;${street};${city};${region};${postcode};${country}
+item4.URL:${url}
+item4.X-ABLabel:_$!<HomePage>!$_
+END:VCARD`;
+            qrcode(vcard)
+
+
+        }
+
+    }
+
+
+
+
+
+ 
+    function generateQr() {
+
+
+       
+            if (document.getElementById("London").classList.value == '') {
+            isUrlValid(document.getElementById('writ').value);
+            
+            
+
+        } else if (document.getElementById("Paris").classList.value == '') {
+            var text2 = document.getElementById('textwrit').value;
+            qrcode(text2)
+           
+           
+        } else {
+            generateQ();
+           
+        }
+        
+
+
+      
+
+
+
+
+
+
+
+
+    }
+
+    let download
+
+    function qrcode(text) {
+        console.log(text)
+        var color = document.getElementById('colorInput').value;
+        document.getElementById("canvas").innerHTML = " "
+        const qrCode = new QRCodeStyling({
+            width: 200,
+            height: 200,
+            type: "svg",
+            data: text,
+            image: "",
+            dotsOptions: {
+                color: color,
+                type: "rounded"
+            },
+            backgroundOptions: {
+                color: "white",
+            },
+            imageOptions: {
+                crossOrigin: "anonymous",
+                margin: 20
+            }
+        });
+        download = qrCode
+
+        qrCode.append(document.getElementById("canvas"));
+
+
+
+
+    }
+
+    function downloadQr() {
+        download.download({ name: "qr", extension: "svg" });
+    }
+    function downloadQrq() {
+        download.download({ name: "qr", extension: "jpg" });
+    }
+    function isUrlValid(userInput) {
+        var res = userInput.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+        if (res == null) {
+            document.getElementById('errormsg').innerHTML = 'please enter correct url'
+        }
+        else {
+            if (document.getElementById("London").classList.value == '') {
+                var text1 = document.getElementById('writ').value;
+                qrcode(text1)
+            }
+            document.getElementById('errormsg').innerHTML = ''
+        }
+
+    }
+
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("right").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("right").style.marginLeft = "0";
+    }
+
+   
+
+
+</script>
+</html>
