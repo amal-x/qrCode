@@ -469,7 +469,7 @@
     }
     .searchformfld label{
         position: absolute;
-        margin-left: 0px;
+        margin-left: 4px;
         top: 123px;
         color: black;
         cursor: text;
